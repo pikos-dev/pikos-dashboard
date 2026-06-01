@@ -1,22 +1,262 @@
-<!doctype html><html data-build-id="83c1aec1cb" data-git-hash="83c1aec1cb050992c25b50e441034abbdcdfff5b" data-build-timestamp="1780191616" data-version="1.0.0" data-env="" data-color-version="v2" lang="en" data-theme="claude" data-mode="light" class="h-screen antialiased scroll-smooth"><head data-ion-ip-country="AU"><link rel="preconnect" href="https://assets-proxy.anthropic.com" crossorigin><link rel="dns-prefetch" href="https://assets-proxy.anthropic.com"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title data-react-fallback>Claude</title><meta data-react-fallback name="description" content="Claude is Anthropic's AI, built for problem solvers. Tackle complex challenges, analyze data, write code, and think through your hardest work."><meta name="apple-itunes-app" content="app-id=6473753684"><meta property="og:type" content="website"><meta property="og:site_name" content="Claude"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"><link rel="icon" type="image/png" sizes="32x32" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce67964e7-CAX1bqSh.png"><link rel="icon" type="image/png" sizes="16x16" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c03e51811-DebilQLI.png"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c129d018a-jJjJELY8.png"><link rel="apple-touch-startup-image" href="/images/claude_app_icon.png"><link rel="manifest" href="/manifest.json"><meta name="mobile-web-app-capable" content="yes"><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-CFxw3nG7.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-C-BHYa_K.woff2" as="font" type="font/woff2" crossorigin><script nonce="plilGDSPIj3b40zSTtohqQ==">void 0===globalThis.process&&(globalThis.process={env:{},cwd:function(){return"/"}}),void 0===globalThis.global&&(globalThis.global=globalThis)</script><script type="application/ld+json" nonce="plilGDSPIj3b40zSTtohqQ==">{
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "name": "Claude",
-            "alternateName": ["Claude.ai", "Claude by Anthropic"],
-            "url": "https://claude.com"
-          },
-          {
-            "@type": "Organization",
-            "name": "Anthropic",
-            "url": "https://www.anthropic.com",
-            "logo": "https://claude.ai/images/claude_ogimage.png",
-            "sameAs": [
-              "https://x.com/AnthropicAI",
-              "https://www.linkedin.com/company/anthropic",
-              "https://www.youtube.com/@anthropic-ai"
-            ]
-          }
-        ]
-      }</script><script nonce="plilGDSPIj3b40zSTtohqQ==">!function(){try{performance.mark?.("rq_cache:preload_start");const e="keyval-store",o="keyval",r="react-query-cache",t=new Promise(t=>{if(!window.indexedDB)return void t(void 0);const c=indexedDB.open(e);c.onupgradeneeded=()=>{c.transaction?.abort()},c.onerror=()=>t(void 0),c.onsuccess=()=>{const a=c.result;if(!a.objectStoreNames.contains(o))return a.close(),indexedDB.deleteDatabase(e),void t(void 0);try{const e=a.transaction(o,"readonly").objectStore(o).get(r);e.onerror=()=>{a.close(),t(void 0)},e.onsuccess=()=>{a.close(),window.__PRELOADED_IDB_CACHE_RESULT__=e.result,t(e.result)}}catch{a.close(),t(void 0)}}});window.__PRELOADED_IDB_CACHE__=t,performance.measure?.("rq_cache:preload_exec",{start:"rq_cache:preload_start"})}catch{}}()</script><link rel="preconnect" href="https://js.stripe.com"><link rel="preconnect" href="https://m.stripe.network"><script type="module" crossorigin src="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-jeZyCqHR.js" nonce="plilGDSPIj3b40zSTtohqQ=="></script><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c2591c98b-yIeMwlTz.css"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6a992d55-BT_FX7PY.css"></head><body class="bg-bg-100 text-text-100 font-ui min-h-screen"><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pikos Digital Marketing Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0C0C0C;color:#F0EBE4;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.6}
+header{display:flex;align-items:center;justify-content:space-between;padding:2rem 2.5rem 1.5rem;border-bottom:0.5px solid rgba(181,160,138,0.18)}
+.logo{letter-spacing:.28em;font-size:22px;font-weight:700;color:#B5A08A;text-transform:uppercase}
+.hmeta{font-size:12px;color:#8C8278;text-align:right}
+.hmeta strong{display:block;color:#CFC0AC;font-size:13px}
+main{padding:2rem 2.5rem 3rem;max-width:1280px;margin:0 auto}
+.slabel{font-size:10px;letter-spacing:.14em;color:#7A6E62;text-transform:uppercase;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:.5px solid rgba(181,160,138,0.18)}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:.5rem}
+.kpi{background:#161616;border:.5px solid rgba(181,160,138,0.18);border-radius:4px;padding:1rem 1.25rem}
+.kpi-l{font-size:11px;color:#8C8278;margin-bottom:6px}
+.kpi-v{font-size:26px;font-weight:600;color:#CFC0AC}
+.kpi-s{font-size:11px;color:#8C8278;margin-top:3px}
+.card{background:#161616;border:.5px solid rgba(181,160,138,0.18);border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:12px}
+.ctitle{font-size:12px;font-weight:600;letter-spacing:.06em;color:#B5A08A;text-transform:uppercase;margin-bottom:1rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.leg{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px}
+.li{display:flex;align-items:center;gap:6px;font-size:11px;color:#8C8278}
+.ld{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+.cw{position:relative;width:100%}
+footer{text-align:center;padding:1.5rem;font-size:11px;color:#8C8278;border-top:.5px solid rgba(181,160,138,0.18);letter-spacing:.06em}
+@media(max-width:780px){header{flex-direction:column;gap:.5rem}.two{grid-template-columns:1fr}main{padding:1.25rem 1rem 2rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">P I K O S</div>
+  <div class="hmeta"><strong>Digital Marketing Dashboard</strong>Week ending 31 May 2026</div>
+</header>
+<main>
+
+<p class="slabel">Weekly snapshot — 31 May</p>
+<div class="kgrid">
+  <div class="kpi"><div class="kpi-l">Total leads</div><div class="kpi-v">41</div><div class="kpi-s">Hubspot</div></div>
+  <div class="kpi"><div class="kpi-l">Skye website users</div><div class="kpi-v">1,177</div><div class="kpi-s">Google Analytics</div></div>
+  <div class="kpi"><div class="kpi-l">Gaia website users</div><div class="kpi-v">583</div><div class="kpi-s">New ads ramping up</div></div>
+  <div class="kpi"><div class="kpi-l">Google Ads spend</div><div class="kpi-v">$859</div><div class="kpi-s">Skye + Gaia active</div></div>
+  <div class="kpi"><div class="kpi-l">Google Ads conversions</div><div class="kpi-v">497</div><div class="kpi-s">Search Ads strong</div></div>
+  <div class="kpi"><div class="kpi-l">Pinterest results</div><div class="kpi-v">356</div><div class="kpi-s">Skye campaigns</div></div>
+</div>
+
+<p class="slabel">Hubspot — leads by channel</p>
+<div class="card">
+  <div class="ctitle">Weekly leads by channel</div>
+  <div class="leg">
+    <span class="li"><span class="ld" style="background:#B5A08A"></span>Paid social</span>
+    <span class="li"><span class="ld" style="background:#7DAF8A"></span>Direct</span>
+    <span class="li"><span class="ld" style="background:#8B9BB5"></span>Offline</span>
+    <span class="li"><span class="ld" style="background:#CFC0AC"></span>Organic search</span>
+    <span class="li"><span class="ld" style="background:#6E6660"></span>Other</span>
+  </div>
+  <div class="cw" style="height:300px"><canvas id="c1"></canvas></div>
+</div>
+
+<div class="card">
+  <div class="ctitle">Total weekly leads</div>
+  <div class="cw" style="height:200px"><canvas id="c2"></canvas></div>
+</div>
+
+<p class="slabel">Hubspot — leads by sales team member</p>
+<div class="card">
+  <div class="ctitle">Weekly leads per team member</div>
+  <div class="leg">
+    <span class="li"><span class="ld" style="background:#B5A08A"></span>Jo Prince-Gillies</span>
+    <span class="li"><span class="ld" style="background:#8B9BB5"></span>Tracey Van Dyk</span>
+    <span class="li"><span class="ld" style="background:#7DAF8A"></span>Ashley Treloar</span>
+    <span class="li"><span class="ld" style="background:#6E6660"></span>Sales@pikos.com</span>
+  </div>
+  <div class="cw" style="height:280px"><canvas id="c3"></canvas></div>
+</div>
+
+<p class="slabel">Google Analytics — website traffic</p>
+<div class="two">
+  <div class="card">
+    <div class="ctitle">Skye — users & sessions</div>
+    <div class="leg">
+      <span class="li"><span class="ld" style="background:#B5A08A"></span>Users</span>
+      <span class="li"><span class="ld" style="background:#6E6660"></span>Sessions</span>
+    </div>
+    <div class="cw" style="height:200px"><canvas id="c4"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="ctitle">Gaia — users & sessions</div>
+    <div class="leg">
+      <span class="li"><span class="ld" style="background:#B5A08A"></span>Users</span>
+      <span class="li"><span class="ld" style="background:#6E6660"></span>Sessions</span>
+    </div>
+    <div class="cw" style="height:200px"><canvas id="c5"></canvas></div>
+  </div>
+</div>
+
+<div class="two">
+  <div class="card">
+    <div class="ctitle">Skye — traffic sources (31 May)</div>
+    <div class="cw" style="height:230px"><canvas id="c6"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="ctitle">Gaia — traffic sources (31 May)</div>
+    <div class="cw" style="height:230px"><canvas id="c7"></canvas></div>
+  </div>
+</div>
+
+<p class="slabel">Google Ads performance</p>
+<div class="card">
+  <div class="ctitle">Weekly spend, clicks & conversions</div>
+  <div class="leg">
+    <span class="li"><span class="ld" style="background:#B5A08A"></span>Spend ($)</span>
+    <span class="li"><span class="ld" style="background:#6E6660"></span>Clicks</span>
+    <span class="li"><span class="ld" style="background:#7DAF8A"></span>Conversions (line)</span>
+  </div>
+  <div class="cw" style="height:260px"><canvas id="c8"></canvas></div>
+</div>
+
+<p class="slabel">Pinterest — performance</p>
+<div class="two">
+  <div class="card">
+    <div class="ctitle">Weekly paid results</div>
+    <div class="cw" style="height:200px"><canvas id="c9"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="ctitle">Weekly spend ($)</div>
+    <div class="cw" style="height:200px"><canvas id="c10"></canvas></div>
+  </div>
+</div>
+<div class="two">
+  <div class="card">
+    <div class="ctitle">Paid impressions</div>
+    <div class="cw" style="height:180px"><canvas id="c11"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="ctitle">Organic impressions</div>
+    <div class="cw" style="height:180px"><canvas id="c12"></canvas></div>
+  </div>
+</div>
+
+<p class="slabel">eDM — email open rates</p>
+<div class="card">
+  <div class="ctitle">Open rate by campaign</div>
+  <div class="cw" style="height:340px"><canvas id="c13"></canvas></div>
+</div>
+
+</main>
+<footer>PIKOS &nbsp;·&nbsp; DIGITAL MARKETING &nbsp;·&nbsp; CONFIDENTIAL</footer>
+
+<script>
+const G='#1e1e1e';
+const W=['1 Feb','8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+
+new Chart(document.getElementById('c1'),{type:'bar',data:{labels:W,datasets:[
+  {label:'Paid social',data:[54,6,43,13,9,10,18,11,21,17,15,28,24,38,16,12,21,18],backgroundColor:'#B5A08A'},
+  {label:'Direct',data:[12,17,44,10,16,12,18,14,9,7,9,5,4,6,9,4,9,7],backgroundColor:'#7DAF8A'},
+  {label:'Offline',data:[9,1,6,17,2,2,2,1,3,5,1,5,4,4,2,6,3,14],backgroundColor:'#8B9BB5'},
+  {label:'Organic',data:[2,3,10,4,1,3,3,1,2,1,0,5,1,1,1,0,3,1],backgroundColor:'#CFC0AC'},
+  {label:'Other',data:[0,1,2,0,1,1,0,0,2,0,1,5,2,2,3,2,0,1],backgroundColor:'#6E6660'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:11},maxRotation:45},grid:{color:G}},
+y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c2'),{type:'line',data:{labels:W,datasets:[{
+  data:[77,28,105,44,29,28,41,27,37,30,26,44,35,51,31,24,36,41],
+  borderColor:'#B5A08A',backgroundColor:'rgba(181,160,138,0.1)',
+  borderWidth:2,pointRadius:4,pointBackgroundColor:'#B5A08A',fill:true,tension:0.3}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11},maxRotation:45},grid:{color:G}},
+y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const TW=['8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+new Chart(document.getElementById('c3'),{type:'bar',data:{labels:TW,datasets:[
+  {label:'Jo',data:[24,30,17,13,12,20,18,19,14,13,17,10,14,14,10,21,11],backgroundColor:'#B5A08A'},
+  {label:'Tracey',data:[9,8,9,15,11,17,9,15,10,12,21,19,35,14,11,14,18],backgroundColor:'#8B9BB5'},
+  {label:'Ashley',data:[0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0],backgroundColor:'#7DAF8A'},
+  {label:'Sales@',data:[1,1,2,1,1,1,0,3,6,1,2,3,1,2,1,1,1],backgroundColor:'#6E6660'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:11},maxRotation:45},grid:{color:G}},
+y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const GW=['29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+new Chart(document.getElementById('c4'),{type:'bar',data:{labels:GW,datasets:[
+  {label:'Users',data:[202,421,376,851,2202,2772,1900,2475,1661,1177],backgroundColor:'#B5A08A'},
+  {label:'Sessions',data:[247,524,443,968,2622,3369,2391,2768,2288,1276],backgroundColor:'#6E6660'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c5'),{type:'bar',data:{labels:GW,datasets:[
+  {label:'Users',data:[345,607,509,459,369,702,263,64,112,583],backgroundColor:'#B5A08A'},
+  {label:'Sessions',data:[376,658,596,495,403,747,304,74,143,179],backgroundColor:'#6E6660'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const SC=['#B5A08A','#8B9BB5','#7DAF8A','#CFC0AC','#6E6660','#9B8A7A','#5A6E80'];
+new Chart(document.getElementById('c6'),{type:'doughnut',data:{
+  labels:['Paid Search','Paid Social','Organic Search','Organic Social','Direct','Unassigned','Other'],
+  datasets:[{data:[567,165,119,109,136,65,115],backgroundColor:SC,borderWidth:0}]},
+options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+plugins:{legend:{position:'right',labels:{color:'#8C8278',font:{size:10},boxWidth:9,padding:8}}}}});
+
+new Chart(document.getElementById('c7'),{type:'doughnut',data:{
+  labels:['Direct','Paid Social','Organic Search','Organic Social','Paid Search','Referral','Other'],
+  datasets:[{data:[131,184,135,42,70,9,6],backgroundColor:SC,borderWidth:0}]},
+options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+plugins:{legend:{position:'right',labels:{color:'#8C8278',font:{size:10},boxWidth:9,padding:8}}}}});
+
+const AW=['22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+new Chart(document.getElementById('c8'),{type:'bar',data:{labels:AW,datasets:[
+  {label:'Spend',data:[42,431,821,749,407,662,605,484,1064,777,859],backgroundColor:'#B5A08A',yAxisID:'y'},
+  {label:'Clicks',data:[25,222,626,543,764,3375,3511,2314,3029,1535,768],backgroundColor:'#6E6660',yAxisID:'y'},
+  {type:'line',label:'Conversions',data:[2,10,12,27,15,10,6,89,737,523,497],
+   borderColor:'#7DAF8A',backgroundColor:'#7DAF8A',pointBackgroundColor:'#7DAF8A',
+   borderWidth:2,pointRadius:5,yAxisID:'y2'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},
+y:{ticks:{color:'#8C8278'},grid:{color:G},title:{display:true,text:'$ / clicks',color:'#6E6660',font:{size:10}}},
+y2:{position:'right',ticks:{color:'#8C8278'},grid:{drawOnChartArea:false},title:{display:true,text:'conversions',color:'#6E6660',font:{size:10}}}}}});
+
+const PW=['22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+new Chart(document.getElementById('c9'),{type:'bar',data:{labels:PW,datasets:[{
+  data:[11,156,117,117,111,151,780,210,282,304,356],backgroundColor:'#B5A08A'}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c10'),{type:'bar',data:{labels:PW,datasets:[{
+  data:[143.89,345.25,354.44,345.68,350.87,210.5,776.66,205.94,477.24,535.46,482.04],backgroundColor:'#8B9BB5'}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},
+y:{ticks:{color:'#8C8278',callback:v=>'$'+v},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c11'),{type:'line',data:{labels:PW,datasets:[{
+  data:[13208,24973,28706,33423,35007,22381,69820,21214,43910,42674,44581],
+  borderColor:'#CFC0AC',backgroundColor:'rgba(207,192,172,0.08)',
+  borderWidth:2,pointRadius:4,pointBackgroundColor:'#CFC0AC',fill:true,tension:0.3}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const OW=['29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+new Chart(document.getElementById('c12'),{type:'line',data:{labels:OW,datasets:[{
+  data:[13610,25680,16420,38490,36330,61130,23070,44500,44210,null],
+  borderColor:'#7DAF8A',backgroundColor:'rgba(125,175,138,0.08)',
+  borderWidth:2,pointRadius:4,pointBackgroundColor:'#7DAF8A',fill:true,tension:0.3,
+  spanGaps:false}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const EL=['Skye project completion','Skye milestone','Skye PSI Tower 3','Skye milestone v2',
+'Skye calendly (Tracey)','Skye calendly (Jo)','Gaia calendly (Jo)','Skye resale 160426',
+'Skye photoshoot 070526','Skye Typicals & Open House 070526','Skye Typicals & Open House 270526'];
+const ER=[4.1,73.91,100,78.91,11.3,17.0,21.26,16.95,41,11.05,12];
+new Chart(document.getElementById('c13'),{type:'bar',data:{labels:EL,datasets:[{
+  data:ER,backgroundColor:ER.map(v=>v>=50?'#7DAF8A':v>=20?'#B5A08A':'#6E6660'),borderWidth:0}]},
+options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',callback:v=>v+'%'},grid:{color:G}},
+y:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}}}}});
+</script>
+</body>
+</html>
