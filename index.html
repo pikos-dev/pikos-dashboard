@@ -178,4 +178,88 @@ new Chart(document.getElementById('c3'),{type:'bar',data:{labels:TW,datasets:[
   {label:'Tracey',data:[9,8,9,15,11,17,9,15,10,12,21,19,35,14,11,14,18,12],backgroundColor:'#8B9BB5'},
   {label:'Ashley',data:[0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0],backgroundColor:'#7DAF8A'},
   {label:'Sales@',data:[1,1,2,1,1,1,0,3,6,1,2,3,1,2,1,1,1,0],backgroundColor:'#6E6660'}
-]},options:{responsive:true,maintainAspectRatio:false,
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:11},maxRotation:45},grid:{color:G}},
+y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const GW=['29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun'];
+new Chart(document.getElementById('c4'),{type:'bar',data:{labels:GW,datasets:[
+  {label:'Users',data:[202,421,376,851,2202,2772,1900,2475,1661,1177,null],backgroundColor:'#B5A08A'},
+  {label:'Sessions',data:[247,524,443,968,2622,3369,2391,2768,2288,1276,null],backgroundColor:'#6E6660'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c5'),{type:'bar',data:{labels:GW,datasets:[
+  {label:'Users',data:[345,607,509,459,369,702,263,64,112,583,123],backgroundColor:'#B5A08A'},
+  {label:'Sessions',data:[376,658,596,495,403,747,304,74,143,179,155],backgroundColor:'#6E6660'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const SC=['#B5A08A','#8B9BB5','#7DAF8A','#CFC0AC','#6E6660','#9B8A7A','#5A6E80'];
+new Chart(document.getElementById('c6'),{type:'doughnut',data:{
+  labels:['Paid Search','Paid Social','Organic Search','Organic Social','Direct','Unassigned','Other'],
+  datasets:[{data:[567,165,119,109,136,65,115],backgroundColor:SC,borderWidth:0}]},
+options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+plugins:{legend:{position:'right',labels:{color:'#8C8278',font:{size:10},boxWidth:9,padding:8}}}}});
+
+new Chart(document.getElementById('c7'),{type:'doughnut',data:{
+  labels:['Email','Organic Search','Direct','Paid Search','Organic Social','Referral','Paid Social'],
+  datasets:[{data:[37,47,31,30,1,6,2],backgroundColor:SC,borderWidth:0}]},
+options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+plugins:{legend:{position:'right',labels:{color:'#8C8278',font:{size:10},boxWidth:9,padding:8}}}}});
+
+const AW=['22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun'];
+new Chart(document.getElementById('c8'),{type:'bar',data:{labels:AW,datasets:[
+  {label:'Spend',data:[42,431,821,749,407,662,605,484,1064,777,859,460],backgroundColor:'#B5A08A',yAxisID:'y'},
+  {label:'Clicks',data:[25,222,626,543,764,3375,3511,2314,3029,1535,768,401],backgroundColor:'#6E6660',yAxisID:'y'},
+  {type:'line',label:'Conversions',data:[2,10,12,27,15,10,6,89,737,523,497,268],
+   borderColor:'#7DAF8A',backgroundColor:'#7DAF8A',pointBackgroundColor:'#7DAF8A',
+   borderWidth:2,pointRadius:5,yAxisID:'y2'}
+]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},
+y:{ticks:{color:'#8C8278'},grid:{color:G},title:{display:true,text:'$ / clicks',color:'#6E6660',font:{size:10}}},
+y2:{position:'right',ticks:{color:'#8C8278'},grid:{drawOnChartArea:false},title:{display:true,text:'conversions',color:'#6E6660',font:{size:10}}}}}});
+
+const PW=['22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May'];
+new Chart(document.getElementById('c9'),{type:'bar',data:{labels:PW,datasets:[{
+  data:[11,156,117,117,111,151,780,210,282,304,356],backgroundColor:'#B5A08A'}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c10'),{type:'bar',data:{labels:PW,datasets:[{
+  data:[143.89,345.25,354.44,345.68,350.87,210.5,776.66,205.94,477.24,535.46,482.04],backgroundColor:'#8B9BB5'}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},
+y:{ticks:{color:'#8C8278',callback:v=>'$'+v},grid:{color:G}}}}});
+
+new Chart(document.getElementById('c11'),{type:'line',data:{labels:PW,datasets:[{
+  data:[13208,24973,28706,33423,35007,22381,69820,21214,43910,42674,44581],
+  borderColor:'#CFC0AC',backgroundColor:'rgba(207,192,172,0.08)',
+  borderWidth:2,pointRadius:4,pointBackgroundColor:'#CFC0AC',fill:true,tension:0.3}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const OW=['29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun'];
+new Chart(document.getElementById('c12'),{type:'line',data:{labels:OW,datasets:[{
+  data:[13610,25680,16420,38490,36330,61130,23070,44500,44210,47080,44460],
+  borderColor:'#7DAF8A',backgroundColor:'rgba(125,175,138,0.08)',
+  borderWidth:2,pointRadius:4,pointBackgroundColor:'#7DAF8A',fill:true,tension:0.3}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+
+const EL=[
+  'Skye project completion','Skye milestone','Skye PSI Tower 3','Skye milestone v2',
+  'Skye calendly (Tracey)','Skye calendly (Jo)','Gaia calendly (Jo)',
+  'Skye resale 160426','Skye photoshoot 070526','Skye Typicals & Open House 070526',
+  'Skye Typicals & Open House 270526','Gaia construction update (buyers)',
+  'Gaia construction update (prospects)'
+];
+const ER=[4.1,73.91,100,78.91,11.3,17.0,21.26,16.95,41,11.05,12,59,25];
+new Chart(document.getElementById('c13'),{type:'bar',data:{labels:EL,datasets:[{
+  data:ER,backgroundColor:ER.map(v=>v>=50?'#7DAF8A':v>=20?'#B5A08A':'#6E6660'),borderWidth:0}]},
+options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+scales:{x:{ticks:{color:'#8C8278',callback:v=>v+'%'},grid:{color:G}},
+y:{ticks:{color:'#8C8278',font:{size:11}},grid:{color:G}}}}});
+</script>
+</body>
+</html>
