@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pikos Digital Marketing Dashboard</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0C0C0C;color:#F0EBE4;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.6}
@@ -152,6 +153,8 @@ footer{text-align:center;padding:1.5rem;font-size:11px;color:#8C8278;border-top:
 
 <script>
 const G='#1e1e1e';
+ChartDataLabels && Chart.register(ChartDataLabels);
+Chart.defaults.plugins.datalabels = {display:false};
 const W=['1 Feb','8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun'];
 
 new Chart(document.getElementById('c1'),{type:'bar',data:{labels:W,datasets:[
@@ -164,13 +167,18 @@ new Chart(document.getElementById('c1'),{type:'bar',data:{labels:W,datasets:[
 scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:10},maxRotation:45},grid:{color:G}},
 y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
 
-new Chart(document.getElementById('c2'),{type:'line',data:{labels:W,datasets:[{
+new Chart(document.getElementById('c2'),{type:'line',
+plugins:[ChartDataLabels],
+data:{labels:W,datasets:[{
   data:[77,28,105,44,29,28,41,27,37,30,26,44,35,51,31,24,36,41,33,34],
   borderColor:'#B5A08A',backgroundColor:'rgba(181,160,138,0.1)',
-  borderWidth:2,pointRadius:4,pointBackgroundColor:'#B5A08A',fill:true,tension:0.3}]},
-options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+  borderWidth:2,pointRadius:5,pointBackgroundColor:'#B5A08A',fill:true,tension:0.3,
+  datalabels:{align:'top',anchor:'end',color:'#CFC0AC',font:{size:10,weight:'600'},
+    formatter:v=>v}}]},
+options:{responsive:true,maintainAspectRatio:false,
+plugins:{legend:{display:false},datalabels:{display:true}},
 scales:{x:{ticks:{color:'#8C8278',font:{size:10},maxRotation:45},grid:{color:G}},
-y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
+y:{ticks:{color:'#8C8278'},grid:{color:G},min:0,max:120}}}});
 
 const TW=['8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun'];
 new Chart(document.getElementById('c3'),{type:'bar',data:{labels:TW,datasets:[
