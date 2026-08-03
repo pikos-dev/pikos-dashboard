@@ -34,18 +34,18 @@ footer{text-align:center;padding:1.5rem;font-size:11px;color:#8C8278;border-top:
 <body>
 <header>
   <div class="logo">P I K O S</div>
-  <div class="hmeta"><strong>Digital Marketing Dashboard</strong>Week ending 5 July 2026</div>
+  <div class="hmeta"><strong>Digital Marketing Dashboard</strong>Week ending 2 August 2026</div>
 </header>
 <main>
 
-<p class="slabel">Weekly snapshot — 5 July</p>
+<p class="slabel">Weekly snapshot — 2 August</p>
 <div class="kgrid">
-  <div class="kpi"><div class="kpi-l">Total leads</div><div class="kpi-v">44</div><div class="kpi-s">Hubspot</div></div>
-  <div class="kpi"><div class="kpi-l">Skye website users</div><div class="kpi-v">1,370</div><div class="kpi-s">Google Analytics</div></div>
-  <div class="kpi"><div class="kpi-l">Gaia website users</div><div class="kpi-v">488</div><div class="kpi-s">Google Analytics</div></div>
-  <div class="kpi"><div class="kpi-l">Google Ads spend</div><div class="kpi-v">$899</div><div class="kpi-s">6 active campaigns</div></div>
-  <div class="kpi"><div class="kpi-l">Google Ads conversions</div><div class="kpi-v">1,086</div><div class="kpi-s">Record Gaia Search week</div></div>
-  <div class="kpi"><div class="kpi-l">Pinterest results</div><div class="kpi-v">316</div><div class="kpi-s">3 campaigns active</div></div>
+  <div class="kpi"><div class="kpi-l">Total leads</div><div class="kpi-v">34</div><div class="kpi-s">Hubspot</div></div>
+  <div class="kpi"><div class="kpi-l">Skye website users</div><div class="kpi-v">1,174</div><div class="kpi-s">Google Analytics</div></div>
+  <div class="kpi"><div class="kpi-l">Gaia website users</div><div class="kpi-v">317</div><div class="kpi-s">Google Analytics</div></div>
+  <div class="kpi"><div class="kpi-l">Google Ads spend</div><div class="kpi-v">$1,104</div><div class="kpi-s">6 active campaigns</div></div>
+  <div class="kpi"><div class="kpi-l">Google Ads conversions</div><div class="kpi-v">1,026</div><div class="kpi-s">Skye Display driving volume</div></div>
+  <div class="kpi"><div class="kpi-l">Pinterest results</div><div class="kpi-v">Paused</div><div class="kpi-s">All campaigns turned off</div></div>
 </div>
 
 <p class="slabel">Hubspot — leads by channel</p>
@@ -100,11 +100,11 @@ footer{text-align:center;padding:1.5rem;font-size:11px;color:#8C8278;border-top:
 
 <div class="two">
   <div class="card">
-    <div class="ctitle">Skye — traffic sources (5 Jul)</div>
+    <div class="ctitle">Skye — traffic sources (2 Aug)</div>
     <div class="cw" style="height:230px"><canvas id="c6"></canvas></div>
   </div>
   <div class="card">
-    <div class="ctitle">Gaia — traffic sources (5 Jul)</div>
+    <div class="ctitle">Gaia — traffic sources (2 Aug)</div>
     <div class="cw" style="height:230px"><canvas id="c7"></canvas></div>
   </div>
 </div>
@@ -121,6 +121,7 @@ footer{text-align:center;padding:1.5rem;font-size:11px;color:#8C8278;border-top:
 </div>
 
 <p class="slabel">Pinterest — performance</p>
+<p style="font-size:11px;color:#8C8278;margin:-0.5rem 0 1rem">All Pinterest campaigns were turned off as of 2 Aug — figures below reflect the final active week (5 Jul).</p>
 <div class="two">
   <div class="card">
     <div class="ctitle">Weekly paid results</div>
@@ -156,14 +157,14 @@ const G='#1e1e1e';
 ChartDataLabels&&Chart.register(ChartDataLabels);
 Chart.defaults.plugins.datalabels={display:false};
 
-const W=['1 Feb','8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul'];
+const W=['1 Feb','8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul','12 Jul','19 Jul','26 Jul','2 Aug'];
 
 new Chart(document.getElementById('c1'),{type:'bar',data:{labels:W,datasets:[
-  {label:'Paid social',data:[54,6,43,13,9,10,18,11,21,17,15,28,24,38,16,12,21,18,14,21,15,14,23],backgroundColor:'#B5A08A'},
-  {label:'Direct',    data:[12,17,44,10,16,12,18,14,9,7,9,5,4,6,9,4,9,7,6,4,10,5,7],backgroundColor:'#7DAF8A'},
-  {label:'Offline',   data:[9,1,6,17,2,2,2,1,3,5,1,5,4,4,2,6,3,14,9,7,7,7,5],backgroundColor:'#8B9BB5'},
-  {label:'Organic',   data:[2,3,10,4,1,3,3,1,2,1,0,5,1,1,1,0,3,1,4,1,2,2,2],backgroundColor:'#CFC0AC'},
-  {label:'Other',     data:[0,1,2,0,1,1,0,0,2,0,1,1,2,2,3,2,0,1,0,1,0,3,7],backgroundColor:'#6E6660'}
+  {label:'Paid social',data:[54,6,43,13,9,10,18,11,21,17,15,28,24,38,16,12,21,18,14,21,15,14,23,9,12,10,11],backgroundColor:'#B5A08A'},
+  {label:'Direct',    data:[12,17,44,10,16,12,18,14,9,7,9,5,4,6,9,4,9,7,6,4,10,5,7,13,5,15,8],backgroundColor:'#7DAF8A'},
+  {label:'Offline',   data:[9,1,6,17,2,2,2,1,3,5,1,5,4,4,2,6,3,14,9,7,7,7,5,1,2,2,5],backgroundColor:'#8B9BB5'},
+  {label:'Organic',   data:[2,3,10,4,1,3,3,1,2,1,0,5,1,1,1,0,3,1,4,1,2,2,2,0,2,0,1],backgroundColor:'#CFC0AC'},
+  {label:'Other',     data:[0,1,2,0,1,1,0,0,2,0,1,1,2,2,3,2,0,1,0,1,0,3,7,9,9,4,9],backgroundColor:'#6E6660'}
 ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
 scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:10},maxRotation:45},grid:{color:G}},
 y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
@@ -171,7 +172,7 @@ y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
 new Chart(document.getElementById('c2'),{type:'line',
 plugins:[ChartDataLabels],
 data:{labels:W,datasets:[{
-  data:[77,28,105,44,29,28,41,27,37,30,26,44,35,51,31,24,36,41,33,34,34,31,44],
+  data:[77,28,105,44,29,28,41,27,37,30,26,44,35,51,31,24,36,41,33,34,34,31,44,32,30,31,34],
   borderColor:'#B5A08A',backgroundColor:'rgba(181,160,138,0.1)',
   borderWidth:2,pointRadius:5,pointBackgroundColor:'#B5A08A',fill:true,tension:0.3,
   datalabels:{align:'top',anchor:'end',color:'#CFC0AC',font:{size:10,weight:'600'},formatter:v=>v}}]},
@@ -180,47 +181,47 @@ plugins:{legend:{display:false},datalabels:{display:true}},
 scales:{x:{ticks:{color:'#8C8278',font:{size:10},maxRotation:45},grid:{color:G}},
 y:{ticks:{color:'#8C8278'},grid:{color:G},min:0,max:120}}}});
 
-const TW=['8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul'];
+const TW=['8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul','12 Jul','19 Jul','26 Jul','2 Aug'];
 new Chart(document.getElementById('c3'),{type:'bar',data:{labels:TW,datasets:[
-  {label:'Jo',    data:[24,30,17,13,12,20,18,19,14,13,17,10,14,14,10,21,11,12,14,6,13,18],backgroundColor:'#B5A08A'},
-  {label:'Tracey',data:[9,8,9,15,11,17,9,15,10,12,21,19,35,14,11,14,18,12,16,9,15,22],backgroundColor:'#8B9BB5'},
-  {label:'Ashley',data:[0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0],backgroundColor:'#7DAF8A'},
-  {label:'Other', data:[1,1,2,1,1,1,0,3,6,1,2,3,1,2,1,1,1,0,1,17,3,3],backgroundColor:'#6E6660'}
+  {label:'Jo',    data:[24,30,17,13,12,20,18,19,14,13,17,10,14,14,10,21,11,12,14,6,13,18,10,0,13,6],backgroundColor:'#B5A08A'},
+  {label:'Tracey',data:[9,8,9,15,11,17,9,15,10,12,21,19,35,14,11,14,18,12,16,9,15,22,18,0,22,24],backgroundColor:'#8B9BB5'},
+  {label:'Ashley',data:[0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],backgroundColor:'#7DAF8A'},
+  {label:'Other', data:[1,1,2,1,1,1,0,3,6,1,2,3,1,2,1,1,1,0,1,17,3,3,0,0,1,2],backgroundColor:'#6E6660'}
 ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
 scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:10},maxRotation:45},grid:{color:G}},
 y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
 
-const GW=['29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul'];
+const GW=['29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul','12 Jul','19 Jul','26 Jul','2 Aug'];
 new Chart(document.getElementById('c4'),{type:'bar',data:{labels:GW,datasets:[
-  {label:'Users',   data:[202,421,376,851,2202,2772,1900,2475,1661,1177,658,854,1600,1554,1370],backgroundColor:'#B5A08A'},
-  {label:'Sessions',data:[247,524,443,968,2622,3369,2391,2768,2288,1276,798,978,1796,1815,1618],backgroundColor:'#6E6660'}
+  {label:'Users',   data:[202,421,376,851,2202,2772,1900,2475,1661,1177,658,854,1600,1554,1370,1455,1361,1271,1174],backgroundColor:'#B5A08A'},
+  {label:'Sessions',data:[247,524,443,968,2622,3369,2391,2768,2288,1276,798,978,1796,1815,1618,1651,1550,1447,1339],backgroundColor:'#6E6660'}
 ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
 scales:{x:{ticks:{color:'#8C8278',font:{size:10}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
 
 new Chart(document.getElementById('c5'),{type:'bar',data:{labels:GW,datasets:[
-  {label:'Users',   data:[345,607,509,459,369,702,263,64,112,583,123,187,393,405,488],backgroundColor:'#B5A08A'},
-  {label:'Sessions',data:[376,658,596,495,403,747,304,74,143,179,155,221,423,428,534],backgroundColor:'#6E6660'}
+  {label:'Users',   data:[345,607,509,459,369,702,263,64,112,583,123,187,393,405,488,491,475,378,317],backgroundColor:'#B5A08A'},
+  {label:'Sessions',data:[376,658,596,495,403,747,304,74,143,179,155,221,423,428,534,527,502,429,359],backgroundColor:'#6E6660'}
 ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
 scales:{x:{ticks:{color:'#8C8278',font:{size:10}},grid:{color:G}},y:{ticks:{color:'#8C8278'},grid:{color:G}}}}});
 
 const SC=['#B5A08A','#8B9BB5','#7DAF8A','#CFC0AC','#6E6660','#9B8A7A','#5A6E80'];
 new Chart(document.getElementById('c6'),{type:'doughnut',data:{
   labels:['Paid Search','Cross-network','Organic Search','Unassigned','Direct','Paid Social','Organic Social','Email','Referral'],
-  datasets:[{data:[999,111,168,64,98,141,52,26,12],backgroundColor:SC,borderWidth:0}]},
+  datasets:[{data:[762,188,224,105,112,11,19,1,12],backgroundColor:SC,borderWidth:0}]},
 options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
 plugins:{legend:{position:'right',labels:{color:'#8C8278',font:{size:10},boxWidth:9,padding:8}}}}});
 
 new Chart(document.getElementById('c7'),{type:'doughnut',data:{
   labels:['Paid Search','Paid Social','Organic Social','Organic Search','Direct','Cross-network','Referral','Email'],
-  datasets:[{data:[264,135,40,19,26,1,2,1],backgroundColor:SC,borderWidth:0}]},
+  datasets:[{data:[231,3,3,47,30,3,0,0],backgroundColor:SC,borderWidth:0}]},
 options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
 plugins:{legend:{position:'right',labels:{color:'#8C8278',font:{size:10},boxWidth:9,padding:8}}}}});
 
-const AW=['22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul'];
+const AW=['22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul','12 Jul','19 Jul','26 Jul','2 Aug'];
 new Chart(document.getElementById('c8'),{type:'bar',data:{labels:AW,datasets:[
-  {label:'Spend',data:[42,431,821,749,407,662,605,484,1064,777,859,460,837,1780,1513,899],backgroundColor:'#B5A08A',yAxisID:'y'},
-  {label:'Clicks',data:[25,222,626,543,764,3375,3511,2314,3029,1535,768,401,611,1459,1488,1575],backgroundColor:'#6E6660',yAxisID:'y'},
-  {type:'line',label:'Conversions',data:[2,10,12,27,15,10,6,89,737,523,497,268,363,1020,7950,1086],
+  {label:'Spend',data:[42,431,821,749,407,662,605,484,1064,777,859,460,837,1780,1513,899,1129,924,1145,1104],backgroundColor:'#B5A08A',yAxisID:'y'},
+  {label:'Clicks',data:[25,222,626,543,764,3375,3511,2314,3029,1535,768,401,611,1459,1488,1575,1524,1379,1566,1579],backgroundColor:'#6E6660',yAxisID:'y'},
+  {type:'line',label:'Conversions',data:[2,10,12,27,15,10,6,89,737,523,497,268,363,1020,7950,1086,1303,1005,920,1026],
    borderColor:'#7DAF8A',backgroundColor:'#7DAF8A',pointBackgroundColor:'#7DAF8A',
    borderWidth:2,pointRadius:5,yAxisID:'y2'}
 ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
