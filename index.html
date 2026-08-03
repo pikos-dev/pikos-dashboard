@@ -183,10 +183,10 @@ y:{ticks:{color:'#8C8278'},grid:{color:G},min:0,max:120}}}});
 
 const TW=['8 Feb','15 Feb','22 Feb','28 Feb','8 Mar','15 Mar','22 Mar','29 Mar','5 Apr','12 Apr','19 Apr','26 Apr','3 May','10 May','17 May','24 May','31 May','7 Jun','15 Jun','21 Jun','28 Jun','5 Jul','12 Jul','19 Jul','26 Jul','2 Aug'];
 new Chart(document.getElementById('c3'),{type:'bar',data:{labels:TW,datasets:[
-  {label:'Jo',    data:[24,30,17,13,12,20,18,19,14,13,17,10,14,14,10,21,11,12,14,6,13,18,10,0,13,6],backgroundColor:'#B5A08A'},
-  {label:'Tracey',data:[9,8,9,15,11,17,9,15,10,12,21,19,35,14,11,14,18,12,16,9,15,22,18,0,22,24],backgroundColor:'#8B9BB5'},
+  {label:'Jo',    data:[24,30,17,13,12,20,18,19,14,13,17,10,14,14,10,21,11,12,14,6,13,18,10,14,13,6],backgroundColor:'#B5A08A'},
+  {label:'Tracey',data:[9,8,9,15,11,17,9,15,10,12,21,19,35,14,11,14,18,12,16,9,15,22,18,16,22,24],backgroundColor:'#8B9BB5'},
   {label:'Ashley',data:[0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],backgroundColor:'#7DAF8A'},
-  {label:'Other', data:[1,1,2,1,1,1,0,3,6,1,2,3,1,2,1,1,1,0,1,17,3,3,0,0,1,2],backgroundColor:'#6E6660'}
+  {label:'Other', data:[1,1,2,1,1,1,0,3,6,1,2,3,1,3,3,8,12,0,4,17,3,3,0,0,1,2],backgroundColor:'#6E6660'}
 ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
 scales:{x:{stacked:true,ticks:{color:'#8C8278',font:{size:10},maxRotation:45},grid:{color:G}},
 y:{stacked:true,ticks:{color:'#8C8278'},grid:{color:G}}}}});
@@ -275,4 +275,4 @@ scales:{x:{ticks:{color:'#8C8278',callback:v=>v+'%'},grid:{color:G}},
 y:{ticks:{color:'#8C8278',font:{size:10}},grid:{color:G}}}}});
 </script>
 </body>
-</html>
+</htm
